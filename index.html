@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kaspi-red: #f14635;
+            --gold: #ffcc00;
+        }
+
+        body { 
+            background: transparent; 
+            margin: 0; padding: 0; 
+            display: flex; align-items: center; justify-content: center;
+            width: 100vw; height: 100vh;
+            font-family: 'Russo One', sans-serif;
+            overflow: hidden;
+        }
+
+        .kaspi-wrapper {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; /* Екі жазудың арасы */
+        }
+
+        /* КАСПИ НӨМІРІ - ГИГАНТ */
+        .number-glow {
+            font-size: 90px; 
+            color: #fff;
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 15px var(--kaspi-red),
+                0 0 30px var(--kaspi-red),
+                0 0 60px var(--kaspi-red);
+            animation: pulseRed 1.5s infinite alternate;
+            line-height: 1;
+        }
+
+        /* АСТЫНДАҒЫ ЖАЗУ - ЕНДІ ҮЛКЕН ӘРІ АНЫҚ */
+        .sub-text {
+            font-size: 45px; /* 26-дан 45-ке дейін үлкейттім */
+            color: var(--gold);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 
+                0 0 15px rgba(255, 204, 0, 0.7),
+                0 0 30px rgba(255, 204, 0, 0.4);
+            animation: pulseGold 1.5s infinite alternate;
+        }
+
+        /* ҚЫЗЫЛ ЖАРЫҚ ПУЛЬСАЦИЯСЫ */
+        @keyframes pulseRed {
+            from { transform: scale(1); text-shadow: 0 0 15px var(--kaspi-red), 0 0 30px var(--kaspi-red); }
+            to { transform: scale(1.02); text-shadow: 0 0 25px var(--kaspi-red), 0 0 50px var(--kaspi-red), 0 0 80px var(--kaspi-red); }
+        }
+
+        /* АЛТЫН ЖАРЫҚ ПУЛЬСАЦИЯСЫ */
+        @keyframes pulseGold {
+            from { opacity: 0.8; transform: translateY(0); }
+            to { opacity: 1; transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kaspi-wrapper">
+        <div class="number-glow">4400 4303 9900 8140</div>
+        
+        <div class="sub-text">KASPI GOLD • ДАМИР С.</div>
+    </div>
+
+</body>
+</html>

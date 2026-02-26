@@ -23,45 +23,35 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px; /* Екі жазудың арасы */
+            gap: 5px; /* Арасы жинақы */
         }
 
-        /* КАСПИ НӨМІРІ - ГИГАНТ */
+        /* КАСПИ НӨМІРІ - ЖИНАҚЫ РАЗМЕР */
         .number-glow {
-            font-size: 90px; 
+            font-size: 55px; /* Оңтайлы размер */
             color: #fff;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             text-shadow: 
-                0 0 15px var(--kaspi-red),
-                0 0 30px var(--kaspi-red),
-                0 0 60px var(--kaspi-red);
-            animation: pulseRed 1.5s infinite alternate;
+                0 0 10px var(--kaspi-red),
+                0 0 20px var(--kaspi-red);
+            animation: pulseRed 2s infinite alternate;
             line-height: 1;
         }
 
-        /* АСТЫНДАҒЫ ЖАЗУ - ЕНДІ ҮЛКЕН ӘРІ АНЫҚ */
+        /* АСТЫНДАҒЫ ЖАЗУ - СТИЛЬДІ ӘРІ АНЫҚ */
         .sub-text {
-            font-size: 45px; /* 26-дан 45-ке дейін үлкейттім */
+            font-size: 24px; /* Тым үлкен емес, тым кіші емес */
             color: var(--gold);
-            letter-spacing: 6px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            font-weight: bold;
-            text-shadow: 
-                0 0 15px rgba(255, 204, 0, 0.7),
-                0 0 30px rgba(255, 204, 0, 0.4);
-            animation: pulseGold 1.5s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+            opacity: 0.95;
         }
 
-        /* ҚЫЗЫЛ ЖАРЫҚ ПУЛЬСАЦИЯСЫ */
+        /* ЖАЙЛЫ ПУЛЬСАЦИЯ */
         @keyframes pulseRed {
-            from { transform: scale(1); text-shadow: 0 0 15px var(--kaspi-red), 0 0 30px var(--kaspi-red); }
-            to { transform: scale(1.02); text-shadow: 0 0 25px var(--kaspi-red), 0 0 50px var(--kaspi-red), 0 0 80px var(--kaspi-red); }
-        }
-
-        /* АЛТЫН ЖАРЫҚ ПУЛЬСАЦИЯСЫ */
-        @keyframes pulseGold {
-            from { opacity: 0.8; transform: translateY(0); }
-            to { opacity: 1; transform: translateY(-5px); }
+            from { text-shadow: 0 0 10px var(--kaspi-red), 0 0 20px var(--kaspi-red); }
+            to { text-shadow: 0 0 15px var(--kaspi-red), 0 0 30px var(--kaspi-red), 0 0 40px var(--kaspi-red); }
         }
     </style>
 </head>
